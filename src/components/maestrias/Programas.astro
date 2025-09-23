@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const programas = [
+  {
+    nombre: "Dirección de Empresas",
+    descripcion: "Desarrolla habilidades directivas, toma de decisiones estratégicas y liderazgo organizacional para impulsar el crecimiento empresarial en entornos competitivos.",
+    icono: "mdi:briefcase-outline", // Representa gestión y liderazgo empresarial
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230001",
+    enlace: "maestrias/made"
+  },
+  {
+    nombre: "Tecnología Educativa",
+    descripcion: "Integra herramientas digitales, metodologías innovadoras y plataformas virtuales para transformar procesos de enseñanza y aprendizaje en contextos educativos.",
+    icono: "mdi:tablet-dashboard", // Representa tecnología aplicada a la educación
+    plantel: "Plantel Xalapa",
+    rvoe: "RVOE: 20230002",
+    enlace: "/maestrias/mate"
+  },
+  {
+    nombre: "Administración y Gestión de Instituciones Educativas",
+    descripcion: "Gestiona recursos, lidera equipos académicos y diseña estrategias institucionales para mejorar la calidad educativa y el desempeño organizacional.",
+    icono: "mdi:school-outline", // Representa gestión institucional en el ámbito educativo
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/maestrias/magie"
+  },
+];
+
+---
+
+<section id="programas" class="py-16 px-4 md:px-8 bg-gray-50">
+  <h2 class="text-3xl text-[#1F3C88] md:text-4xl font-bold text-center text-primary mb-12">
+    Programas Académicos
+  </h2>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {programas.map((programa) => (
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start hover:shadow-lg transition">
+        <Icon name={programa.icono} class="w-12 h-12 mb-4 text-[#1F3C88]" />
+        
+        <h3 class="text-xl text-[#1F3C88] font-semibold text-primary mb-2">{programa.nombre}</h3>
+        <p class="text-gray-700 mb-2">{programa.descripcion}</p>
+        <p class="text-sm text-gray-600 mb-1"><strong>Plantel:</strong> {programa.plantel}</p>
+        <p class="text-sm text-gray-600 mb-4"><strong>{programa.rvoe}</strong></p>
+        <a href={programa.enlace} class="inline-block text-center bg-[#F57C00] text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+            Conoce más
+          </a>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+

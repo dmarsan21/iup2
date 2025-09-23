@@ -1,0 +1,137 @@
+---
+import Descripcion from '../../components/psicologia/Descripcion.astro';
+import Hero from '../../components/psicologia/Hero.astro';
+import Plantel from '../../components/psicologia/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/psicologia/Plan.astro';
+import Duracion from '../../components/psicologia/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Licenciatura en Psicología Clínica"
+    subtitle="Formando profesionales comprometidos con el bienestar emocional y mental de las personas."
+    description="La Licenciatura en Psicología Clínica del Instituto Universitario Puebla está enfocada en formar especialistas capaces de evaluar, diagnosticar e intervenir en procesos psicológicos individuales y grupales. El programa integra conocimientos en neuropsicología, psicopatología, psicoterapia, evaluación psicométrica y técnicas de intervención clínica. Se promueve el pensamiento crítico, la ética profesional y el compromiso con la salud mental desde una perspectiva humanista y científica."
+    ingreso="El aspirante debe mostrar interés por el comportamiento humano, sensibilidad social, capacidad de escucha y vocación de servicio. Se valoran habilidades de análisis, empatía, comunicación y compromiso ético."
+    egreso="El egresado será capaz de aplicar técnicas de evaluación psicológica, diseñar planes de intervención clínica, implementar psicoterapias individuales y grupales, y contribuir al bienestar emocional de las personas con enfoque ético, científico y humanista."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Filosofía del ser Humano",
+        "Redacción de Textos Académicos",
+        "Introducción a la Psicología",
+        "Comunicación",
+        "Habilidades para el pensamiento crítico y creativo",
+        "Principios éticos y valores",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Teorías del Aprendizaje",
+        "Teorías de la personalidad",
+        "Desarrollo infantil y del adolescente",
+        "Psicobiología",
+        "Psicología de los grupos",
+        "Habilidades informáticas",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Desarrollo del adulto y la vejez",
+        "Fundamentos biológicos de la conducta",
+        "Teoría y técnica de la entrevista",
+        "Psicología Social",
+        "Psicología ambiental y comunitaria",
+        "Introducción a la psicopatología",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Neuropsicología",
+        "Psicología del Mexicano",
+        "Análisis del Entorno Social",
+        "Psicoanálisis",
+        "Ética y Bioética",
+        "Sexualidad Humana",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Estadística Básica",
+        "Psicometría",
+        "Psicofarmacología",
+        "Metodología de la Investigación",
+        "Psicopatología",
+        "Enfoques Contemporáneos Psicoterapéuticos",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Análisis Estadístico",
+        "Evaluación Psicométrica",
+        "Psicofarmacología Asociada al Comportamiento",
+        "Evaluación Psicopatológica",
+        "Entrevista Clínica",
+        "Introducción a la Psicoterapia",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Psicodiagnóstico",
+        "Psicoterapia individual",
+        "Psicoterapia Sexual",
+        "Psicoterapia Cognitiva",
+        "Psicoterapia Humanista",
+        "Terapia Psicoanalítica",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Modelo Sistémico",
+        "Supervisión de Casos",
+        "Psicoterapia de Pareja",
+        "Psicoterapia Familiar",
+        "Psicoterapia Infantil",
+        "Intervención en Crisis",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Seminario de Tesis",
+        "Programación Neurolingüística",
+        "Evaluación de Casos",
+        "Psicoterapia de los Grupos",
+        "Hipnosis",
+        "Psicología Organizacional",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años (9 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

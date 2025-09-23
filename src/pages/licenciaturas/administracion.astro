@@ -1,0 +1,148 @@
+---
+import Descripcion from '../../components/administracion/Descripcion.astro';
+import Hero from '../../components/administracion/Hero.astro';
+import Plantel from '../../components/administracion/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/administracion/Plan.astro';
+import Duracion from '../../components/administracion/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+  
+  <Descripcion
+    title="Licenciatura en Administración de Empresas"
+    subtitle="Formando líderes empresariales con visión estratégica y responsabilidad social."
+    description="La Licenciatura en Administración de Empresas del Instituto Universitario Puebla está orientada a formar profesionales capaces de dirigir, gestionar y transformar organizaciones en entornos competitivos. El programa ofrece una formación integral en áreas como finanzas, mercadotecnia, recursos humanos, emprendimiento y planeación estratégica. Se promueve el pensamiento crítico, la toma de decisiones basada en datos y el liderazgo ético, preparando al egresado para enfrentar los retos del mundo empresarial con innovación y responsabilidad."
+    ingreso="El aspirante debe mostrar interés por el entorno empresarial, habilidades de comunicación, pensamiento analítico y capacidad para trabajar en equipo. Se valora la iniciativa, la ética y la disposición para liderar proyectos organizacionales."
+    egreso="El egresado será capaz de diseñar estrategias empresariales, gestionar recursos humanos y financieros, liderar procesos administrativos y emprender proyectos innovadores con responsabilidad social y visión global."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Fundamentos de Administración",
+        "Contabilidad General",
+        "Matemáticas Aplicadas",
+        "Introducción a la Economía",
+        "Habilidades de Comunicación",
+        "Taller de Liderazgo",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Administración de Recursos Humanos",
+        "Contabilidad de Costos",
+        "Estadística Empresarial",
+        "Microeconomía",
+        "Comportamiento Organizacional",
+        "Informática Aplicada",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Mercadotecnia I",
+        "Finanzas I",
+        "Macroeconomía",
+        "Derecho Empresarial",
+        "Planeación Estratégica",
+        "Taller de Creatividad e Innovación",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Mercadotecnia II",
+        "Finanzas II",
+        "Administración de la Producción",
+        "Investigación de Mercados",
+        "Gestión de Calidad",
+        "Ética Profesional",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Emprendimiento y Desarrollo de Negocios",
+        "Finanzas Corporativas",
+        "Administración de Proyectos",
+        "Comercio Internacional",
+        "Gestión del Talento Humano",
+        "Electiva I",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Dirección Empresarial",
+        "Evaluación de Proyectos",
+        "Marketing Digital",
+        "Negociación y Manejo de Conflictos",
+        "Responsabilidad Social Corporativa",
+        "Electiva II",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Consultoría Empresarial",
+        "Gestión Financiera Avanzada",
+        "Innovación y Tecnología",
+        "Seminario de Investigación",
+        "Electiva III",
+        "Prácticas Profesionales",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Seminario de Tesis",
+        "Dirección Estratégica",
+        "Gestión del Cambio Organizacional",
+        "Auditoría Administrativa",
+        "Electiva IV",
+        "Proyecto Integrador",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Seminario de Tesis",
+        "Dirección Estratégica",
+        "Gestión del Cambio Organizacional",
+        "Auditoría Administrativa",
+        "Electiva IV",
+        "Proyecto Integrador",
+      ],
+    },
+    {
+      periodo: "Decimo Cuatrimestre",
+      materias: [
+        "Seminario de Tesis",
+        "Dirección Estratégica",
+        "Gestión del Cambio Organizacional",
+        "Auditoría Administrativa",
+        "Electiva IV",
+        "Proyecto Integrador",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años y 4 meses (10 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

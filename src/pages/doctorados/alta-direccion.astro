@@ -1,0 +1,76 @@
+---
+import Descripcion from '../../components/alta-direccion/Descripcion.astro';
+import Hero from '../../components/alta-direccion/Hero.astro';
+import Plantel from '../../components/alta-direccion/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/alta-direccion/Plan.astro';
+import Duracion from '../../components/alta-direccion/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Doctorado en Alta Dirección"
+    subtitle="Formando líderes estratégicos con visión integral, capacidad analítica y enfoque innovador."
+    description="El Doctorado en Alta Dirección del Instituto Universitario Puebla está diseñado para formar expertos capaces de transformar organizaciones públicas y privadas mediante estrategias de liderazgo, innovación y gestión avanzada. El programa integra conocimientos en análisis económico, comportamiento organizacional, tecnologías de información, prospectiva corporativa y políticas estratégicas. Se promueve el pensamiento crítico, la toma de decisiones éticas y la generación de soluciones competitivas para entornos complejos."
+    ingreso="El aspirante debe contar con formación profesional en áreas afines a la administración, economía, ingeniería o gestión pública, preferentemente con estudios de maestría. Se valoran habilidades analíticas, experiencia directiva, pensamiento estratégico y compromiso con la mejora organizacional."
+    egreso="El egresado será capaz de liderar procesos de transformación institucional, diseñar estrategias de competitividad, gestionar sistemas de calidad, analizar escenarios corporativos y contribuir al desarrollo de modelos innovadores en alta dirección desde una perspectiva ética y sostenible."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Seminario de metodología de la investigación con énfasis en ciencias empresariales",
+        "Seminario de métodos cuantitativos para la investigación y el análisis de áreas de oportunidad",
+        "Seminario de aplicación de sistemas y tecnologías de información en la gestión administrativa",
+        "Seminario de la investigación en comportamientos organizacionales y corporativos",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Seminario de análisis estratégico para la mejora del factor humano",
+        "Seminario de análisis de modelos económicos y financieros para la toma de decisiones",
+        "Seminario de análisis de la gestión en la administración pública",
+        "Seminario de alianzas estratégicas y redes de innovación para la competitividad",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Seminario de análisis del manejo presupuestal en la empresa pública y privada",
+        "Seminario de investigación en estructuras y comportamientos sindicales en México",
+        "Seminario de investigación en procesos de alta competitividad y productividad",
+        "Seminario de investigación para la prospectiva de escenarios corporativos",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Seminario de liderazgo estratégico y toma de decisiones",
+        "Seminario de investigación en políticas y administración estratégica",
+        "Seminario de análisis de sistemas de gestión de la calidad",
+        "Seminario de investigación: la tesis doctoral",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (4 semestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios de maestría",
+      "Título de maestría",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

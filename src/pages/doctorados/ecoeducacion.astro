@@ -1,0 +1,75 @@
+---
+import Descripcion from '../../components/ecoeducacion/Descripcion.astro';
+import Hero from '../../components/ecoeducacion/Hero.astro';
+import Plantel from '../../components/ecoeducacion/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/ecoeducacion/Plan.astro';
+import Duracion from '../../components/ecoeducacion/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Doctorado en Ecoeducación"
+    subtitle="Formando investigadores comprometidos con la transformación educativa y el cuidado del entorno."
+    description="El Doctorado en Ecoeducación del Instituto Universitario Puebla está orientado a la formación de investigadores capaces de generar propuestas educativas integrales, éticas y sostenibles. El programa promueve el análisis de la educación desde una perspectiva holística, ambiental y humanista, integrando saberes sobre el ser humano, la naturaleza, la sociedad y la prospectiva educativa. Se impulsa el desarrollo de proyectos ecoeducativos que respondan a los desafíos contemporáneos con visión crítica y transformadora."
+    ingreso="El aspirante debe contar con formación profesional en educación, pedagogía, psicología, ciencias sociales o áreas afines, preferentemente con estudios de maestría. Se valoran habilidades de reflexión crítica, sensibilidad ambiental, compromiso social y capacidad de investigación."
+    egreso="El egresado será capaz de diseñar e implementar proyectos ecoeducativos, generar conocimiento original en el campo de la educación ambiental, participar en procesos de transformación institucional y contribuir al desarrollo de políticas educativas sostenibles con enfoque ético y humanista."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Seminario de investigación: Visión sistemática de la educación",
+        "Seminario de investigación: Educación holística",
+        "Seminario de investigación: Ser humano",
+        "Seminario de metodología de la investigación",
+        "Seminario de investigación doctoral II",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Seminario de investigación: Educación permanente",
+        "Seminario de investigación: Ética ecoeducativa",
+        "Seminario de investigación: Educación, naturaleza y medio ambiente",
+        "Seminario de proyecto de tesis",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Seminario de investigación: Escenarios ecoeducativos",
+        "Seminario de investigación: Familia y ecoeducación",
+        "Seminario de investigación: Proyectos ecoeducativos",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Seminario de investigación doctoral I",
+        "Seminario de investigación: Educación y trabajo",
+        "Seminario de investigación: Prospectiva de la ecoeducación en México",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (4 semestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios de maestría",
+      "Título de maestría",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

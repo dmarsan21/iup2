@@ -1,0 +1,147 @@
+---
+import Descripcion from '../../components/industrial/Descripcion.astro';
+import Hero from '../../components/industrial/Hero.astro';
+import Plantel from '../../components/industrial/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/industrial/Plan.astro';
+import Duracion from '../../components/industrial/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Ingeniería Industrial"
+    subtitle="Formando profesionales en optimización de procesos, gestión de calidad y liderazgo organizacional."
+    description="La Licenciatura en Ingeniería Industrial del Instituto Universitario Puebla está diseñada para formar especialistas capaces de mejorar la eficiencia de sistemas productivos, administrativos y logísticos. El programa integra conocimientos en matemáticas, física, programación, manufactura, calidad, liderazgo y evaluación de proyectos. Se promueve el pensamiento analítico, la innovación, el trabajo colaborativo y el compromiso con la mejora continua y la sustentabilidad."
+    ingreso="El aspirante debe mostrar interés por la resolución de problemas técnicos y administrativos, habilidades lógico-matemáticas, capacidad de análisis y disposición para trabajar en equipo. Se valora la iniciativa, la organización y el enfoque hacia la eficiencia."
+    egreso="El egresado será capaz de diseñar y optimizar procesos industriales, implementar sistemas de calidad, liderar proyectos de mejora, gestionar recursos humanos y materiales, y contribuir al desarrollo sustentable de las organizaciones."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Matemáticas I",
+        "Física I",
+        "Programación I",
+        "Química I",
+        "Dibujo I",
+        "Comunicación Oral y Escrita",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Matemáticas II",
+        "Física II",
+        "Programación II",
+        "Química II",
+        "Dibujo II",
+        "Metodología de la Investigación",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Matemáticas III",
+        "Física III",
+        "Programación III",
+        "Administración",
+        "Probabilidad y Estadística",
+        "Cultura de la Calidad",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Matemáticas IV",
+        "Física IV",
+        "Programación III",
+        "Administración II",
+        "Impacto Ambiental",
+        "Investigación de Operaciones",
+        "Proyectos I",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Matemáticas V",
+        "Física V",
+        "Administración III",
+        "Desarrollo de Emprendedores",
+        "Liderazgo",
+        "Ecología",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Diseño del Trabajo",
+        "Control Estadístico de Calidad",
+        "Contabilidad de Costos",
+        "Dinámica de Sistemas",
+        "Análisis y Diseño de Experimentos",
+        "Procesos de Manufactura I",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Planeación de Plantas Industriales",
+        "Administración de la Producción I",
+        "Control de Procesos",
+        "Valores Socioculturales en el Mundo",
+        "Metrología",
+        "Tópicos I",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Sistema de Calidad",
+        "Administración de la Producción II",
+        "Sistemas de Información",
+        "Modelación Estructural de Sistemas",
+        "Procesos de Manufactura II",
+        "Tópicos II",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Sistemas Integrados de Manufactura",
+        "Diseño de Sistemas",
+        "Producción I",
+        "Sistemas de Soporte",
+        "Tópicos III",
+      ],
+    },
+    {
+      periodo: "Décimo Cuatrimestre",
+      materias: [
+        "Sistemas de Planeación",
+        "Evaluación de Proyectos",
+        "Seminario de Titulación",
+        "Evaluación del Ejercicio Profesional",
+        "Tópicos IV",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años y 4 meses (10 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

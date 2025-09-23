@@ -1,0 +1,30 @@
+---
+type Periodo = {
+  periodo: string;
+  materias: string[];
+};
+
+const { plan = [] }: { plan?: Periodo[] } = Astro.props;
+---
+
+<section class="bg-white py-12">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-[#1F3C88] mb-10 text-center">Plan de Estudios</h2>
+
+    <div class="relative border-l-2 border-[#F57C00] pl-6 space-y-10">
+      {plan.map((bloque, index) => (
+        <div class="relative">
+          <div class="absolute -left-3 top-1 w-6 h-6 bg-[#F57C00] rounded-full border-4 border-white shadow-md"></div>
+          <div class="bg-[#F9FAFB] p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold text-[#1F2937] mb-4">{bloque.periodo}</h3>
+            <ul class="list-disc list-inside text-[#1F2937] space-y-1 text-sm">
+              {bloque.materias.map((materia) => (
+                <li>{materia}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

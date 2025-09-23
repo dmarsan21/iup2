@@ -1,0 +1,148 @@
+---
+import Descripcion from '../../components/sistemas/Descripcion.astro';
+import Hero from '../../components/sistemas/Hero.astro';
+import Plantel from '../../components/sistemas/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/sistemas/Plan.astro';
+import Duracion from '../../components/sistemas/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Ingeniería en Sistemas Computacionales"
+    subtitle="Formando ingenieros capaces de diseñar, implementar y optimizar soluciones tecnológicas innovadoras."
+    description="La Licenciatura en Ingeniería en Sistemas Computacionales del Instituto Universitario Puebla está orientada a formar profesionales con sólidos conocimientos en programación, electrónica, redes, arquitectura de computadoras y gestión de proyectos tecnológicos. El programa integra teoría y práctica en áreas clave como algoritmos, bases de datos, sistemas operativos, control de procesos y telecomunicaciones. Se promueve el pensamiento lógico, la resolución de problemas, la innovación y el trabajo colaborativo para enfrentar los retos del mundo digital."
+    ingreso="El aspirante debe mostrar interés por la tecnología, habilidades lógico-matemáticas, curiosidad por el funcionamiento de los sistemas computacionales y disposición para aprender de manera práctica y colaborativa."
+    egreso="El egresado será capaz de desarrollar software, administrar redes y sistemas, diseñar soluciones tecnológicas, liderar proyectos informáticos y aplicar conocimientos científicos y técnicos en entornos industriales, educativos y empresariales."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Introducción a la ingeniería en sistemas computacionales",
+        "Comunicación oral y escrita",
+        "Matemáticas I",
+        "Física",
+        "Diseño estructural de algoritmos",
+        "Metodología de la investigación",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Electricidad y magnetismo",
+        "Matemáticas II",
+        "Matemáticas discretas",
+        "Programación I",
+        "Inglés I",
+        "Química general I",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Contabilidad",
+        "Electrónica básica",
+        "Matemáticas III",
+        "Probabilidad",
+        "Programación II",
+        "Inglés II",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Administración",
+        "Sistemas digitales",
+        "Matemáticas IV",
+        "Estadística aplicada",
+        "Investigación de operaciones I",
+        "Programación III",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Ingeniería económica",
+        "Estructura de datos I",
+        "Fundamentos de análisis numéricos",
+        "Investigación de operaciones II",
+        "Procesos de manufactura",
+        "Seminario de investigación",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Estructura de datos II",
+        "Administración de archivos",
+        "Lenguajes y autómatas",
+        "Simulación",
+        "Circuitos eléctricos I",
+        "Procesos de manufactura II",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Administración de servicios de cómputo",
+        "Bases de datos",
+        "Programación de sistemas I",
+        "Teoría de control I",
+        "Circuitos eléctricos II",
+        "Tecnología de materiales",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Plantas y procesos industriales",
+        "Teleproceso",
+        "Arquitectura de computadoras I",
+        "Programación de sistemas II",
+        "Ingeniería de software",
+        "Teoría de control II",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Mantenimiento industrial",
+        "Administración de la producción",
+        "Sistemas operativos I",
+        "Redes de computadoras",
+        "Teoría de control III",
+        "Control de Procesos",
+      ],
+    },
+    {
+      periodo: "Décimo Cuatrimestre",
+      materias: [
+        "Control de calidad",
+        "Sistemas operativos II",
+        "Planeación y evaluación de proyectos de información",
+        "Legislación informática",
+        "Arquitectura de computadoras II",
+        "Telecomunicaciones",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años y 4 meses (10 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

@@ -1,0 +1,56 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const programas = [
+  {
+    nombre: "Ingeniería en Sistemas Computacionales",
+    descripcion: "Diseña, desarrolla y optimiza software, redes y sistemas inteligentes para resolver problemas tecnológicos en entornos empresariales e institucionales.",
+    icono: "mdi:desktop-classic",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230001",
+    enlace: "/ingenierias/sistemas"
+  },
+  {
+    nombre: "Ingeniería Civil",
+    descripcion: "Planifica, diseña y supervisa obras de infraestructura como carreteras, puentes y edificaciones, aplicando principios estructurales y normativas de construcción.",
+    icono: "mdi:bridge",
+    plantel: "Plantel Xalapa",
+    rvoe: "RVOE: 20230002",
+    enlace: "/ingenierias/civil"
+  },
+  {
+    nombre: "Ingeniería Industrial",
+    descripcion: "Optimiza procesos productivos, gestiona recursos humanos y materiales, y mejora la eficiencia operativa en industrias y organizaciones.",
+    icono: "mdi:factory",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/ingenierias/industrial"
+  },
+];
+
+---
+
+<section id="programas" class="py-16 px-4 md:px-8 bg-gray-50">
+  <h2 class="text-3xl text-[#1F3C88] md:text-4xl font-bold text-center text-primary mb-12">
+    Programas Académicos
+  </h2>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {programas.map((programa) => (
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start hover:shadow-lg transition">
+        <Icon name={programa.icono} class="w-12 h-12 mb-4 text-[#1F3C88]" />
+        
+        <h3 class="text-xl text-[#1F3C88] font-semibold text-primary mb-2">{programa.nombre}</h3>
+        <p class="text-gray-700 mb-2">{programa.descripcion}</p>
+        <p class="text-sm text-gray-600 mb-1"><strong>Plantel:</strong> {programa.plantel}</p>
+        <p class="text-sm text-gray-600 mb-4"><strong>{programa.rvoe}</strong></p>
+        <a href={programa.enlace} class="inline-block text-center bg-[#F57C00] text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+            Conoce más
+          </a>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+

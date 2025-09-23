@@ -1,0 +1,80 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const programas = [
+  {
+    nombre: "Licenciatura en Derecho",
+    descripcion: "Estudia el marco legal mexicano, desarrolla habilidades de litigación, mediación y defensa jurídica con enfoque ético y social.",
+    icono: "mdi:scale-balance",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230001",
+    enlace: "/licenciaturas/derecho"
+  },
+  {
+    nombre: "Licenciatura en Administración de Empresas",
+    descripcion: "Aprende a dirigir organizaciones, gestionar recursos y tomar decisiones estratégicas en entornos competitivos y globalizados.",
+    icono: "mdi:briefcase-outline",
+    plantel: "Plantel Xalapa",
+    rvoe: "RVOE: 20230002",
+    enlace: "/licenciaturas/administracion"
+  },
+  {
+    nombre: "Licenciatura en Contaduría Pública",
+    descripcion: "Domina la contabilidad financiera, fiscal y administrativa para garantizar transparencia y eficiencia en cualquier institución.",
+    icono: "mdi:calculator-variant",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/licenciaturas/contabilidad"
+  },
+  {
+    nombre: "Licenciatura en Enseñanza de Lenguas Extranjeras",
+    descripcion: "Prepárate para enseñar idiomas con enfoque comunicativo, cultural y pedagógico, aplicando metodologías modernas y efectivas.",
+    icono: "mdi:translate",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/licenciaturas/lenguas"
+  },
+  {
+    nombre: "Licenciatura en Psicología",
+    descripcion: "Explora el comportamiento humano, los procesos mentales y las técnicas de intervención clínica, educativa y organizacional.",
+    icono: "mdi:brain",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/licenciaturas/psicologia"
+  },
+  {
+    nombre: "Licenciatura en Criminología y Criminalística",
+    descripcion: "Analiza el fenómeno delictivo, investiga hechos criminales y contribuye a la prevención y justicia desde una perspectiva científica.",
+    icono: "mdi:shield-search",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: 20230003",
+    enlace: "/licenciaturas/criminologia"
+  }
+];
+
+---
+
+<section id="programas" class="py-16 px-4 md:px-8 bg-gray-50">
+  <h2 class="text-3xl text-[#1F3C88] md:text-4xl font-bold text-center text-primary mb-12">
+    Programas Académicos
+  </h2>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    {programas.map((programa) => (
+      <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start hover:shadow-lg transition">
+        <Icon name={programa.icono} class="w-12 h-12 mb-4 text-[#1F3C88]" />
+        
+        <h3 class="text-xl text-[#1F3C88] font-semibold text-primary mb-2">{programa.nombre}</h3>
+        <p class="text-gray-700 mb-2">{programa.descripcion}</p>
+        <p class="text-sm text-gray-600 mb-1"><strong>Plantel:</strong> {programa.plantel}</p>
+        <p class="text-sm text-gray-600 mb-4"><strong>{programa.rvoe}</strong></p>
+        <a href={programa.enlace} class="inline-block text-center bg-[#F57C00] text-white px-4 py-2 rounded hover:bg-orange-600 transition">
+            Conoce más
+          </a>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+

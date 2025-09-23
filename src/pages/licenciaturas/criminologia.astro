@@ -1,0 +1,147 @@
+---
+import Descripcion from '../../components/criminologia/Descripcion.astro';
+import Hero from '../../components/criminologia/Hero.astro';
+import Plantel from '../../components/criminologia/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/criminologia/Plan.astro';
+import Duracion from '../../components/criminologia/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Criminología y Criminalística"
+    subtitle="Formando expertos en el análisis del delito, la conducta criminal y la investigación forense."
+    description="La Licenciatura en Criminología y Criminalística del Instituto Universitario Puebla está orientada a formar profesionales capaces de comprender, prevenir e investigar conductas delictivas desde una perspectiva científica, jurídica y social. El programa integra conocimientos en derecho penal, psicología, medicina forense, técnicas de investigación y análisis criminal, promoviendo el pensamiento crítico, la ética profesional y el compromiso con la justicia y la seguridad pública."
+    ingreso="El aspirante debe mostrar interés por el estudio del comportamiento humano, la justicia, la investigación y el análisis de hechos delictivos. Se valoran habilidades de observación, pensamiento lógico, sensibilidad social y compromiso ético."
+    egreso="El egresado será capaz de realizar investigaciones criminalísticas, elaborar perfiles criminológicos, aplicar técnicas forenses, intervenir en procesos judiciales y contribuir a la prevención del delito con enfoque interdisciplinario y ético."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Introducción a las ciencias jurídicas",
+        "Introducción a la criminalística",
+        "Psicología general",
+        "Lengua extranjera I",
+        "Taller de expresión oral y escrita",
+        "Informática",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Derecho constitucional",
+        "Historia penal",
+        "Criminología I",
+        "Lengua extranjera II",
+        "Estadística",
+        "Psicopatología",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Garantías individuales",
+        "Teoría general del proceso",
+        "Criminología II",
+        "Lengua extranjera III",
+        "Anatomía y fisiología elemental",
+        "Medicina legal y forense I",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Derecho penal I",
+        "Criminalística de campo",
+        "Criminología III",
+        "Lengua extranjera IV",
+        "Documentoscopía",
+        "Neurociencias básico",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Derecho penal II",
+        "Hechos de tránsito",
+        "Criminología IV",
+        "Neuropsicología",
+        "Seguridad pública",
+        "Sistemas de identificación",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Derecho procesal penal",
+        "Filosofía jurídica",
+        "Criminología clínica",
+        "Psicología criminal",
+        "Antropología criminal I",
+        "Psiquiatría forense",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Juicio de amparo",
+        "Técnicas forenses de laboratorio",
+        "Penología",
+        "Bioética y deontología forense",
+        "Antropología criminal II",
+        "Juicios orales en materia penal",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Derecho penitenciario",
+        "Balística",
+        "Victimología",
+        "Derechos humanos e investigación criminalística con perspectiva de género",
+        "Fotografía forense",
+        "Técnicas de entrevista e interrogatorio",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Argumentación jurídica",
+        "Laboratorio de grafoscopía",
+        "Intervención en crisis",
+        "Estudios sobre la diversidad",
+        "Seminario de tesis",
+        "Prevención del delito",
+      ],
+    },
+    {
+      periodo: "Décimo Cuatrimestre",
+      materias: [
+        "Perfiles criminales",
+        "Laboratorio de dactiloscopía",
+        "Reparación del daño",
+        "Sociología criminal",
+        "Cadena de custodia",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años y 4 meses (10 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

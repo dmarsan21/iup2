@@ -1,0 +1,55 @@
+---
+const {
+  duracion,
+  requisitos,
+  cta,
+}: {
+  duracion?: string;
+  requisitos?: string[];
+  cta?: { texto: string; link: string };
+} = Astro.props;
+---
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+
+      <!-- Bloque: Duración -->
+      {duracion && (
+        <div class="bg-[#F9FAFB] p-6 rounded-lg shadow-md border-t-4 border-[#F57C00] flex flex-col items-start">
+          <div class="text-3xl mb-4 text-[#F57C00]">🕒</div>
+          <h3 class="text-xl font-bold text-[#1F2937] mb-2">Duración</h3>
+          <p class="text-sm text-[#1F2937] leading-relaxed">{duracion}</p>
+        </div>
+      )}
+
+      <!-- Bloque: Requisitos -->
+      {requisitos && (
+        <div class="bg-[#F9FAFB] p-6 rounded-lg shadow-md border-t-4 border-[#F57C00] flex flex-col items-start">
+          <div class="text-3xl mb-4 text-[#F57C00]">📋</div>
+          <h3 class="text-xl font-bold text-[#1F2937] mb-2">Requisitos</h3>
+          <ul class="list-disc list-inside text-sm text-[#1F2937] space-y-1">
+            {requisitos.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <!-- Bloque: Acción -->
+      {cta && (
+        <div class="bg-[#F9FAFB] p-6 rounded-lg shadow-md border-t-4 border-[#F57C00] flex flex-col items-start justify-between">
+          <div class="text-3xl mb-4 text-[#F57C00]">📨</div>
+          <h3 class="text-xl font-bold text-[#1F2937] mb-2">¿Listo para comenzar?</h3>
+          <p class="text-sm text-[#1F2937] mb-4">Solicita más información o inicia tu proceso de inscripción.</p>
+          <a
+            href={cta.link}
+            class="inline-block bg-[#F57C00] text-white font-semibold px-5 py-2 rounded hover:bg-[#e66e00] transition"
+          >
+            {cta.texto}
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</section>

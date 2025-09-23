@@ -1,0 +1,75 @@
+---
+import Descripcion from '../../components/docderecho/Descripcion.astro';
+import Hero from '../../components/docderecho/Hero.astro';
+import Plantel from '../../components/docderecho/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/docderecho/Plan.astro';
+import Duracion from '../../components/docderecho/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Doctorado en Derecho"
+    subtitle="Formando investigadores jurídicos con pensamiento crítico, conocimiento teórico y compromiso social."
+    description="El Doctorado en Derecho del Instituto Universitario Puebla está orientado a la formación de investigadores capaces de generar conocimiento original en el ámbito jurídico. El programa promueve el análisis profundo de las teorías del derecho, la filosofía jurídica, el constitucionalismo, y las problemáticas contemporáneas del sistema legal. Se impulsa el desarrollo de habilidades argumentativas, metodológicas y éticas para contribuir al fortalecimiento del Estado de Derecho."
+    ingreso="El aspirante debe contar con formación profesional en derecho o áreas afines, preferentemente con estudios de maestría. Se valoran habilidades de investigación, pensamiento crítico, redacción académica y compromiso con la justicia social."
+    egreso="El egresado será capaz de desarrollar investigaciones jurídicas de alto nivel, participar en proyectos académicos, asesorar en procesos legislativos, y contribuir al análisis y solución de problemas jurídicos complejos desde una perspectiva ética y humanista."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Seminario de Investigación de Metodología",
+        "Epistemología del Derecho",
+        "Seminario de Investigación en Filosofía del Derecho",
+        "Teoría General del Estado y del Derecho",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Seminario de Investigación de Teoría Constitucional",
+        "Seminario de Investigación de Ética Jurídica",
+        "Seminario de Investigación en Derecho Civil",
+        "Seminario de Investigación en Seguridad Pública",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Juicio de Amparo",
+        "Seminario de Investigación en Derecho Comercial",
+        "Seminario de Investigación en Derecho Familiar",
+        "Seminario de Elaboración de Tesis I",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Argumentación e Interpretación Jurídica",
+        "Sociología Jurídica",
+        "Seminario de Elaboración de Tesis II",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (4 semestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios de maestría",
+      "Título de maestría",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

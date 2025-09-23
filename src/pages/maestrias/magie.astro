@@ -1,0 +1,89 @@
+---
+import Descripcion from '../../components/magie/Descripcion.astro';
+import Hero from '../../components/magie/Hero.astro';
+import Plantel from '../../components/magie/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/magie/Plan.astro';
+import Duracion from '../../components/magie/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Administración y Gestión de Instituciones Educativas"
+    subtitle="Formando líderes educativos con visión estratégica, ética institucional y capacidad transformadora."
+    description="La Maestría en Administración y Gestión de Instituciones Educativas del Instituto Universitario Puebla está orientada a formar profesionales capaces de dirigir, planear y evaluar organizaciones educativas con enfoque estratégico, ético y sustentable. El programa integra conocimientos en política educativa, planeación institucional, gestión académica, financiamiento escolar y vinculación con sectores productivos. Se promueve el liderazgo, la innovación y el compromiso con la mejora continua de los sistemas educativos."
+    ingreso="El aspirante debe contar con formación profesional en áreas educativas, administrativas o afines, así como experiencia laboral deseable en instituciones académicas. Se valoran habilidades de liderazgo, pensamiento estratégico, comunicación efectiva y vocación por el servicio educativo."
+    egreso="El egresado será capaz de diseñar planes estratégicos institucionales, gestionar recursos educativos, liderar procesos de mejora, vincular organizaciones con su entorno social y productivo, y tomar decisiones con base en criterios éticos, legales y pedagógicos."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Historia de la Educación en México",
+        "Calidad Total",
+        "Comunicación y Relaciones Humanas",
+        "Marco Legal de las Instituciones Educativas",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Estadística Básica",
+        "Estructura Educativa",
+        "Políticas y Tendencias del Sector Educativo",
+        "Administración Institucional I",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Investigación de Operaciones",
+        "Teoría y Política Económica",
+        "Gestión Académica",
+        "Planeación Institucional",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Desarrollo Económico Regional",
+        "Gestión y Vinculación con Sectores Productivo y Social",
+        "Administración Institucional II",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Planeación Estratégica Institucional",
+        "Fuentes de Financiamiento Escolar e Institucional",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Evaluación Institucional",
+        "Mercadotecnia Institucional",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (6 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios profesionales",
+      "Título profesional",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

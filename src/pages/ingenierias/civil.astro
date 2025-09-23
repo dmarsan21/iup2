@@ -1,0 +1,130 @@
+---
+import Descripcion from '../../components/civil/Descripcion.astro';
+import Hero from '../../components/civil/Hero.astro';
+import Plantel from '../../components/civil/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/civil/Plan.astro';
+import Duracion from '../../components/civil/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Licenciatura en Ingeniería Civil"
+    subtitle="Formando ingenieros capaces de construir el futuro con precisión, responsabilidad y visión sustentable."
+    description="La Licenciatura en Ingeniería Civil del Instituto Universitario Puebla está diseñada para formar profesionales con sólidos conocimientos en estructuras, hidráulica, materiales, construcción y gestión de proyectos. El programa integra teoría y práctica en áreas como física, matemáticas, mecánica de materiales, diseño estructural y medio ambiente. Se promueve el pensamiento analítico, la innovación, el trabajo colaborativo y el compromiso con el desarrollo sostenible de la infraestructura."
+    ingreso="El aspirante debe mostrar interés por las ciencias exactas, habilidades lógico-matemáticas, capacidad de análisis y disposición para resolver problemas técnicos. Se valora la responsabilidad, la creatividad y el compromiso con el entorno social y ambiental."
+    egreso="El egresado será capaz de diseñar, calcular y supervisar obras civiles, aplicar normas técnicas y ambientales, gestionar recursos constructivos y liderar proyectos de infraestructura con enfoque ético, técnico y sustentable."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Álgebra",
+        "Cálculo I",
+        "Geometría Analítica",
+        "Taller de Habilidades Básicas",
+        "Física Experimental",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Álgebra II",
+        "Cálculo II",
+        "Estática",
+        "Química",
+        "Taller de Comunicación Oral y Escrita",
+        "Seminario de Orientación Vocacional y Profesional",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Ecuaciones Diferenciales",
+        "Cálculo III",
+        "Cinemática",
+        "Termodinámica",
+        "Análisis Gráfico",
+        "Taller de Metodología de la Investigación",
+        "Impacto Ambiental",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Métodos Numéricos",
+        "Electricidad y Magnetismo",
+        "Dinámica",
+        "Programación",
+        "Inglés Técnico",
+        "Introducción a la Economía",
+        "Probabilidad",
+      ],
+    },
+    {
+      periodo: "Quinto Semestre",
+      materias: [
+        "Matemáticas Avanzadas",
+        "Estructuras Isostáticas",
+        "Hidráulica Básica",
+        "Estadística",
+        "Mecánica del Medio Continuo",
+        "Contabilidad y Administración",
+        "Planeación",
+      ],
+    },
+    {
+      periodo: "Sexto Semestre",
+      materias: [
+        "Mecánica de Materiales I",
+        "Topografía",
+        "Hidráulica de Canales",
+        "Ingeniería de Sistemas I",
+        "Hidrología",
+        "Administración",
+      ],
+    },
+    {
+      periodo: "Séptimo Semestre",
+      materias: [
+        "Mecánica de Materiales II",
+        "Hidráulica de Máquinas y Transitorios",
+        "Ingeniería de Sistemas II",
+        "Comportamiento de Suelos",
+        "Cultura de la Calidad",
+        "Construcción I",
+        "Análisis Estructural",
+      ],
+    },
+    {
+      periodo: "Octavo Semestre",
+      materias: [
+        "Mecánica de Materiales III",
+        "Cimentaciones",
+        "Abastecimiento de Agua Potable y Alcantarillado",
+        "Mecánica de Suelos",
+        "Seminario de Titulación",
+        "Construcción II",
+        "Diseño Estructural I",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="4 años (8 semestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

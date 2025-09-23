@@ -1,0 +1,89 @@
+---
+import Descripcion from '../../components/mate/Descripcion.astro';
+import Hero from '../../components/mate/Hero.astro';
+import Plantel from '../../components/mate/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/mate/Plan.astro';
+import Duracion from '../../components/mate/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Tecnología Educativa"
+    subtitle="Innovando la enseñanza con herramientas digitales, pensamiento pedagógico y visión transformadora."
+    description="La Maestría en Tecnología Educativa del Instituto Universitario Puebla está orientada a formar profesionales capaces de integrar herramientas digitales, metodologías pedagógicas y sistemas de información en entornos educativos. El programa combina fundamentos en psicología del aprendizaje, diseño curricular, medios educativos y comunicación, promoviendo el pensamiento crítico, la creatividad y la transformación de la práctica docente mediante el uso estratégico de la tecnología."
+    ingreso="El aspirante debe contar con formación profesional en áreas educativas, sociales o afines, así como interés por la innovación pedagógica y el uso de tecnologías aplicadas a la enseñanza. Se valoran habilidades comunicativas, pensamiento reflexivo y compromiso con la mejora educativa."
+    egreso="El egresado será capaz de diseñar materiales didácticos digitales, implementar sistemas de información educativa, liderar proyectos de capacitación, evaluar procesos formativos y transformar entornos de aprendizaje con enfoque inclusivo, ético y tecnológico."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Psicología del Aprendizaje",
+        "Estadística Aplicada a la Educación",
+        "Lenguaje y Comunicación",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Historia General de la Educación",
+        "Métodos de Investigación",
+        "Metodología Educativa",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Orientación Educativa",
+        "Evaluación Educativa",
+        "Teoría del Currículum",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Comunicación y Educación",
+        "Administración Educativa",
+        "Mercadotecnia en la Educación",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Medios y Tecnologías de Educación",
+        "Sistemas de Información en la Educación",
+        "Elaboración de Material Didáctico",
+        "Capacitación de Personal",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Televisión Educativa",
+        "Radio Educativa",
+        "Periodismo Educativo",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (6 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios profesionales",
+      "Título profesional",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

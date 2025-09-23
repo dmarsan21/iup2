@@ -1,0 +1,148 @@
+---
+import Descripcion from '../../components/contabilidad/Descripcion.astro';
+import Hero from '../../components/contabilidad/Hero.astro';
+import Plantel from '../../components/contabilidad/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/contabilidad/Plan.astro';
+import Duracion from '../../components/contabilidad/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Licenciatura en Contaduría Pública"
+    subtitle="Formando profesionales íntegros en el manejo financiero y fiscal de las organizaciones."
+    description="La Licenciatura en Contaduría Pública del Instituto Universitario Puebla está diseñada para formar expertos en el registro, análisis y fiscalización de operaciones financieras. El programa brinda conocimientos sólidos en contabilidad, auditoría, impuestos, finanzas y legislación fiscal, preparando al estudiante para tomar decisiones estratégicas con base en información financiera confiable. Se promueve la ética profesional, el pensamiento crítico y el dominio de herramientas tecnológicas aplicadas al ámbito contable."
+    ingreso="El aspirante debe mostrar interés por los números, la organización financiera y el cumplimiento normativo. Se valoran habilidades analíticas, atención al detalle, responsabilidad y compromiso con la ética profesional."
+    egreso="El egresado será capaz de elaborar e interpretar estados financieros, aplicar normativas fiscales, realizar auditorías, asesorar en planeación financiera y contribuir a la transparencia contable de las organizaciones públicas y privadas."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "Fundamentos de Contabilidad",
+        "Matemáticas Financieras",
+        "Introducción al Derecho",
+        "Administración General",
+        "Habilidades de Comunicación",
+        "Taller de Ética Profesional",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Contabilidad Intermedia",
+        "Estadística Aplicada",
+        "Derecho Fiscal",
+        "Microeconomía",
+        "Informática Contable",
+        "Costos I",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Contabilidad Avanzada",
+        "Macroeconomía",
+        "Impuestos I",
+        "Costos II",
+        "Auditoría I",
+        "Finanzas I",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Normas de Información Financiera",
+        "Impuestos II",
+        "Auditoría II",
+        "Finanzas II",
+        "Contabilidad Gubernamental",
+        "Derecho Laboral",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Planeación Fiscal",
+        "Auditoría Fiscal",
+        "Contabilidad Internacional",
+        "Presupuestos",
+        "Electiva I",
+        "Seminario de Investigación I",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Contabilidad de Sociedades",
+        "Evaluación de Proyectos",
+        "Control Interno",
+        "Electiva II",
+        "Seminario de Investigación II",
+        "Prácticas Profesionales",
+      ],
+    },
+    {
+      periodo: "Séptimo Cuatrimestre",
+      materias: [
+        "Auditoría de Estados Financieros",
+        "Impuestos III",
+        "Contabilidad Electrónica",
+        "Electiva III",
+        "Seminario de Tesis I",
+        "Proyecto Integrador I",
+      ],
+    },
+    {
+      periodo: "Octavo Cuatrimestre",
+      materias: [
+        "Auditoría Gubernamental",
+        "Normatividad Internacional",
+        "Electiva IV",
+        "Seminario de Tesis II",
+        "Proyecto Integrador II",
+        "Gestión del Desempeño Financiero",
+      ],
+    },
+    {
+      periodo: "Noveno Cuatrimestre",
+      materias: [
+        "Seminario de Tesis II",
+        "Auditoría Forense",
+        "Contabilidad Estratégica",
+        "Electiva V",
+        "Proyecto Integrador III",
+        "Responsabilidad Social Corporativa",
+      ],
+    },
+    {
+      periodo: "Décimo Cuatrimestre",
+      materias: [
+        "Seminario de Tesis III",
+        "Auditoría Integral",
+        "Planeación Financiera Estratégica",
+        "Electiva VI",
+        "Proyecto Final",
+        "Evaluación de Riesgos Financieros",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="3 años y 4 meses (10 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

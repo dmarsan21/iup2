@@ -1,15 +1,58 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+// Importación de componentes
+import Top from '../components/Top.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import '../styles/global.css'
+---
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Instituto Universitario Puebla</title>
+  </head>
+  <body>
+    <header class="fixed top-0 left-0 w-full z-50">
+  <div id="header-container" class="relative pt-[26px] transition-all duration-500 ease-in-out">
+    <Top />
+    <Header />
+  </div>
+</header>
+
+
+
+    <main class="pt-[80px]">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- script para el comportamiento del top bar -->
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const topbar = document.getElementById('topbar');
+    const container = document.getElementById('header-container');
+
+    if (!topbar || !container) return;
+
+    // Establece altura inicial
+    container.style.paddingTop = '26px';
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 10) {
+        topbar.style.transform = 'translateY(-100%)';
+        container.style.paddingTop = '0px';
+      } else {
+        topbar.style.transform = 'translateY(0)';
+        container.style.paddingTop = '26px';
+      }
+    });
+  });
+</script>
+  </body>
 </html>
 
 <style>

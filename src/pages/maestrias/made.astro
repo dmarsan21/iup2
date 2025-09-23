@@ -1,0 +1,87 @@
+---
+import Descripcion from '../../components/made/Descripcion.astro';
+import Hero from '../../components/made/Hero.astro';
+import Plantel from '../../components/made/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/made/Plan.astro';
+import Duracion from '../../components/made/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Dirección de Empresas"
+    subtitle="Formando líderes estratégicos con visión global, capacidad analítica y enfoque innovador."
+    description="La Maestría en Dirección de Empresas del Instituto Universitario Puebla está diseñada para formar profesionales capaces de liderar organizaciones en entornos competitivos y cambiantes. El programa integra conocimientos avanzados en estrategia, finanzas, mercadotecnia, recursos humanos, sistemas de información y toma de decisiones. Se promueve el pensamiento crítico, la innovación, el liderazgo ético y la capacidad de transformar modelos de negocio con visión global."
+    ingreso="El aspirante debe contar con formación profesional en áreas afines a la administración, negocios o ingeniería, así como experiencia laboral deseable. Se valoran habilidades de análisis, liderazgo, comunicación efectiva y disposición para el trabajo colaborativo."
+    egreso="El egresado será capaz de diseñar estrategias empresariales, liderar equipos de alto desempeño, tomar decisiones financieras y operativas, gestionar proyectos internacionales y transformar organizaciones con enfoque ético, sostenible y competitivo."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Cuatrimestre",
+      materias: [
+        "El Emprendedor y el Plan de Negocios",
+        "Dirección Estratégica",
+        "Dirección Comercial y Estrategias de Mercadotecnia",
+      ],
+    },
+    {
+      periodo: "Segundo Cuatrimestre",
+      materias: [
+        "Dirección Financiera I",
+        "Dirección de Producción",
+        "Dirección de Recursos Humanos",
+      ],
+    },
+    {
+      periodo: "Tercer Cuatrimestre",
+      materias: [
+        "Sistemas de Información",
+        "Análisis Económico para la Dirección",
+        "Desarrollo de Habilidades Gerenciales",
+      ],
+    },
+    {
+      periodo: "Cuarto Cuatrimestre",
+      materias: [
+        "Mercadotecnia de Servicios",
+        "Dirección Financiera II",
+        "Análisis del Entorno Jurídico, Político, Fiscal y Social",
+      ],
+    },
+    {
+      periodo: "Quinto Cuatrimestre",
+      materias: [
+        "Productividad y Calidad",
+        "Liderazgo Empresarial",
+        "Negocios Internacionales",
+      ],
+    },
+    {
+      periodo: "Sexto Cuatrimestre",
+      materias: [
+        "Equipos de Trabajo Exitosos",
+        "Programa de Decisiones Estratégicas",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="2 años (6 cuatrimestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de estudios profesionales",
+      "Título profesional",
+      "Cédula profesional",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

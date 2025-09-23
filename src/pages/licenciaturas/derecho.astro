@@ -1,0 +1,126 @@
+---
+import Descripcion from '../../components/derecho/Descripcion.astro';
+import Hero from '../../components/derecho/Hero.astro';
+import Plantel from '../../components/derecho/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/derecho/Plan.astro';
+import Duracion from '../../components/derecho/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+  <Descripcion title="Licenciatura en Derecho" subtitle="Formando profesionales del derecho con excelencia académica y compromiso social." 
+  description="La Licenciatura en Derecho del Instituto Universitario Puebla está diseñada para formar profesionales íntegros, críticos y comprometidos con la justicia y el bienestar social. A través de un enfoque multidisciplinario, el programa brinda una formación sólida en teoría jurídica, práctica procesal, derechos humanos y ética profesional. El plan de estudios incorpora herramientas de argumentación legal, análisis normativo y resolución de conflictos, preparando al estudiante para enfrentar los retos del sistema jurídico nacional e internacional. Además, se promueve el pensamiento reflexivo, la responsabilidad social y el dominio de habilidades comunicativas que permiten al egresado desempeñarse con excelencia en diversos ámbitos del derecho."
+  ingreso="El aspirante debe mostrar interés por la justicia, habilidades de comunicación, pensamiento crítico y vocación de servicio público. Se valora la ética, la responsabilidad y el compromiso social." 
+  egreso="El egresado será capaz de interpretar y aplicar el marco jurídico, asesorar legalmente, litigar con fundamentos sólidos y promover la defensa de los derechos humanos en diversos contextos."
+  />
+  <Plantel campus={[
+    { nombre: "Plante Xalapa", rvoe: "RVOE ES032/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES204/2003" },
+  ]} />
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Introducción al Derecho",
+        "Historia del Derecho",
+        "Derecho Romano I",
+        "Teoría del Estado",
+        "Metodología de la Investigación Jurídica",
+        "Habilidades de Comunicación I",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Derecho Constitucional I",
+        "Derecho Civil I",
+        "Derecho Penal I",
+        "Derecho Romano II",
+        "Sociología Jurídica",
+        "Habilidades de Comunicación II",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Derecho Constitucional II",
+        "Derecho Civil II",
+        "Derecho Penal II",
+        "Derecho Mercantil I",
+        "Derecho Laboral I",
+        "Lógica Jurídica",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Derecho Administrativo I",
+        "Derecho Civil III",
+        "Derecho Penal III",
+        "Derecho Mercantil II",
+        "Derecho Laboral II",
+        "Filosofía del Derecho",
+      ],
+    },
+    {
+      periodo: "Quinto Semestre",
+      materias: [
+        "Derecho Administrativo II",
+        "Derecho Civil IV",
+        "Derecho Procesal Civil I",
+        "Derecho Procesal Penal I",
+        "Derecho Internacional Público I",
+        "Ética Profesional",
+      ],
+    },
+    {
+      periodo: "Sexto Semestre",
+      materias: [
+        "Derecho Fiscal I",
+        "Derecho Civil V (Obligaciones y Contratos)",
+        "Derecho Procesal Civil II",
+        "Derecho Procesal Penal II",
+        "Derecho Internacional Público II",
+        "Electiva I (opcional)",
+      ],
+    },
+    {
+      periodo: "Séptimo Semestre",
+      materias: [
+        "Derecho Fiscal II",
+        "Derecho Civil VI (Bienes y Sucesiones)",
+        "Derecho Procesal Laboral I",
+        "Derecho Ambiental I",
+        "Sistemas Alternativos de Solución de Controversias (SASC)",
+        "Electiva II (opcional)",
+      ],
+    },
+    {
+      periodo: "Octavo Semestre",
+      materias: [
+        "Derecho Mercantil III (Sociedades Mercantiles)",
+        "Derecho Civil VII (Familia)",
+        "Derecho Procesal Laboral II",
+        "Derecho Ambiental II",
+        "Seminario de Tesis I",
+        "Electiva III (opcional)",
+      ],
+    },
+  ]}
+    />
+  <Duracion
+    duracion="4 años (8 semestres)"
+  requisitos={[
+    "Acta de nacimiento",
+    "Certificado de bachillerato",
+    "CURP",
+  ]}
+  cta={{ texto: "Solicita más información", link: "/contacto" }}
+
+
+  />
+</Layout>
+
+
+

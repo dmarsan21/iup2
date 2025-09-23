@@ -1,0 +1,126 @@
+---
+import Descripcion from '../../components/lenguas/Descripcion.astro';
+import Hero from '../../components/lenguas/Hero.astro';
+import Plantel from '../../components/lenguas/Plantel.astro';
+import Layout from '../../layouts/Layout.astro';
+import Plan from '../../components/lenguas/Plan.astro';
+import Duracion from '../../components/lenguas/Duracion.astro';
+---
+
+<Layout>
+  <Hero />
+
+  <Descripcion
+    title="Licenciatura en Enseñanza de Lenguas Extranjeras"
+    subtitle="Formando docentes con dominio lingüístico, sensibilidad intercultural y vocación educativa."
+    description="La Licenciatura en Enseñanza de Lenguas Extranjeras del Instituto Universitario Puebla prepara profesionales capaces de enseñar idiomas con enfoque comunicativo, dominio gramatical y comprensión cultural. El programa integra conocimientos en lingüística, pedagogía, fonética, traducción y tecnologías aplicadas a la enseñanza. Se promueve el pensamiento crítico, la empatía y la capacidad de diseñar estrategias didácticas inclusivas y efectivas para diversos contextos educativos."
+    ingreso="El aspirante debe mostrar interés por los idiomas, habilidades comunicativas, sensibilidad intercultural y vocación por la enseñanza. Se valora la creatividad, la empatía y la disposición para trabajar con grupos diversos."
+    egreso="El egresado será capaz de planear, impartir y evaluar clases de lenguas extranjeras, aplicar metodologías didácticas innovadoras, utilizar recursos tecnológicos en el aula y fomentar el aprendizaje significativo con enfoque intercultural."
+  />
+
+  <Plantel campus={[
+    { nombre: "Plantel Xalapa", rvoe: "RVOE ES045/2002" },
+    { nombre: "Plantel Córdoba", rvoe: "RVOE ES210/2003" },
+  ]} />
+
+  <Plan plan={[
+    {
+      periodo: "Primer Semestre",
+      materias: [
+        "Fundamentos de Lingüística",
+        "Gramática del Español",
+        "Introducción a la Enseñanza de Lenguas",
+        "Psicología Educativa",
+        "Habilidades de Comunicación",
+        "Taller de Lectura y Redacción",
+      ],
+    },
+    {
+      periodo: "Segundo Semestre",
+      materias: [
+        "Fonética y Fonología",
+        "Gramática Inglesa I",
+        "Didáctica General",
+        "Sociolingüística",
+        "Tecnologías Aplicadas a la Enseñanza",
+        "Observación Escolar",
+      ],
+    },
+    {
+      periodo: "Tercer Semestre",
+      materias: [
+        "Adquisición de Lenguas",
+        "Gramática Inglesa II",
+        "Planeación Didáctica",
+        "Evaluación Educativa",
+        "Lingüística Aplicada",
+        "Práctica Docente I",
+      ],
+    },
+    {
+      periodo: "Cuarto Semestre",
+      materias: [
+        "Metodología de la Enseñanza del Inglés",
+        "Gramática Inglesa III",
+        "Diseño de Materiales Didácticos",
+        "Literatura en Lengua Inglesa",
+        "Pragmática y Semántica",
+        "Práctica Docente II",
+      ],
+    },
+    {
+      periodo: "Quinto Semestre",
+      materias: [
+        "Traducción Inglés-Español",
+        "Gramática Francesa I",
+        "Evaluación del Aprendizaje de Lenguas",
+        "Gestión Educativa",
+        "Electiva I",
+        "Práctica Docente III",
+      ],
+    },
+    {
+      periodo: "Sexto Semestre",
+      materias: [
+        "Traducción Francés-Español",
+        "Gramática Francesa II",
+        "Diseño Curricular",
+        "Educación Inclusiva",
+        "Electiva II",
+        "Práctica Docente IV",
+      ],
+    },
+    {
+      periodo: "Séptimo Semestre",
+      materias: [
+        "Seminario de Investigación Educativa",
+        "Gramática Francesa III",
+        "Evaluación de Programas Educativos",
+        "Gestión de Proyectos Académicos",
+        "Electiva III",
+        "Servicio Social",
+      ],
+    },
+    {
+      periodo: "Octavo Semestre",
+      materias: [
+        "Seminario de Titulación",
+        "Taller de Producción Académica",
+        "Didáctica de la Traducción",
+        "Electiva IV",
+        "Proyecto Integrador Final",
+        "Práctica Profesional",
+      ],
+    },
+  ]} />
+
+  <Duracion
+    duracion="4 años (8 semestres)"
+    requisitos={[
+      "Acta de nacimiento",
+      "Certificado de bachillerato",
+      "CURP",
+    ]}
+    cta={{ texto: "Solicita más información", link: "/contacto" }}
+  />
+</Layout>

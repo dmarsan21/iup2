@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<footer class="bg-[#003366] text-white py-10 mt-16">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
+
+    <!-- Logo y lema -->
+    <div>
+      <img src="/images/iupfooter.png" alt="Logo Instituto Universitario Puebla" class="h-12 mx-auto md:mx-0 mb-4" />
+      <p class="italic text-sm">
+        Fuerza que inspira, garra que trasciende.
+      </p>
+    </div>
+
+    <!-- Enlaces rápidos -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Programas</h3>
+      <ul class="space-y-1 text-sm">
+        <li><a href="/licenciaturas" class="hover:underline">Licenciaturas</a></li>
+        <li><a href="/ingenierias" class="hover:underline">Ingenierías</a></li>
+        <li><a href="/maestrias" class="hover:underline">Maestrías</a></li>
+        <li><a href="/doctorados" class="hover:underline">Doctorados</a></li>
+      </ul>
+    </div>
+
+    <!-- Plantel Xalapa -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Plantel Xalapa</h3>
+      <p class="text-sm">Av. Americas #309, Col. Jose Cardel</p>
+      <p class="text-sm">Col. José Cardel</p>
+      <p class="text-sm">Tel: +52 (228) 8902483</p>
+      <p class="text-sm">contacto@iup.mx</p>
+    </div>
+
+    <!-- Plantel Córdoba -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Plantel Córdoba</h3>
+      <p class="text-sm">Av. 9 Bis #600</p>
+      <p class="text-sm">Fracc. San Jose</p>
+      <p class="text-sm">Tel: +52 (271) 7497424</p>
+      <p class="text-sm">contacto@iup.mx</p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2">Síguenos</h3>
+      <div class="flex justify-center md:justify-start gap-4 mb-2">
+        <a href="#" aria-label="Facebook" class="hover:opacity-80">
+          <Icon name="mdi:facebook" class="w-6 h-6 hover:text-[#F57C00] transition" />
+          <!-- <img src="/icons/facebook.svg" alt="Facebook" class="h-5" /> -->
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:opacity-80">
+          <Icon name="mdi:instagram" class="w-6 h-6 hover:text-[#F57C00] transition" />
+        </a>
+        <a href="#" aria-label="WhatsApp" class="hover:opacity-80">
+          <Icon name="mdi:whatsapp" class="w-6 h-6 hover:text-[#F57C00] transition" />
+        </a>
+        <a href="#" aria-label="WhatsApp" class="hover:opacity-80">
+          <Icon name="simple-icons:tiktok" class="w-6 h-6 hover:text-[#F57C00] transition" />
+        </a>
+      </div>
+      <p class="text-sm">#EducaciónConGarra</p>      
+    </div>
+
+  </div>
+
+  <!-- Línea inferior -->
+  <div class="mt-10 border-t border-white/20 pt-4 text-xs text-center text-white/80">
+    © 2025 Instituto Universitario Puebla · Todos los derechos reservados · Diseñado por <a href="https://daviddevmx.com" target="_blank  ">DEVMARSAN</a>
+  </div>  
+</footer>

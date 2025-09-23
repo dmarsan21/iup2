@@ -1,0 +1,22 @@
+---
+interface Campus {
+  nombre: string;
+  rvoe: string;
+}
+
+const { campus = [] }: { campus?: Campus[] } = Astro.props;
+---
+
+<section class="bg-white py-12">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-[#1F3C88] mb-8">Planteles y RVOE</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {campus.map((plantel: Campus) => (
+        <div class="border-l-4 border-[#F57C00] pl-4 py-4 bg-[#F9FAFB] rounded shadow-sm">
+          <h3 class="text-xl font-semibold text-[#1F2937] mb-1">{plantel.nombre}</h3>
+          <p class="text-sm text-[#1F2937]">RVOE: {plantel.rvoe}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
