@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+import '../styles/global.css'
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página no encontrada | IUP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-[#F5F5F5] text-[#003366] min-h-screen flex items-center justify-center px-4 py-6">
+    <main class="w-full max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center">
+
+        <!-- Columna izquierda: Pantera -->
+        <!-- Columna izquierda: Pantera -->
+        <div class="flex justify-center">
+          <img src="/images/pantera.png" alt="Pantera institucional IUP" class="w-64 md:w-80 lg:w-96 drop-shadow-lg max-w-full" />
+        </div>
+
+        <!-- Columna derecha: Texto -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left gap-6">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+            404 — Página no encontrada
+          </h1>
+          <p class="text-lg md:text-xl text-neutral-700 leading-relaxed max-w-md">
+            Parece que esta página se ha perdido entre los pasillos del conocimiento.  
+            Pero no te preocupes, siempre puedes volver al inicio o explorar nuestros programas académicos.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start">
+            <a href="/" class="flex items-center justify-center gap-3 bg-[#F57C00] text-white px-6 py-4 min-w-[200px] rounded-xl font-semibold shadow-md hover:bg-orange-600 hover:scale-[1.03] transition-all duration-300">
+              <Icon name="mdi:home" class="w-6 h-6" />
+              <span class="text-lg md:text-xl">Ir al inicio</span>
+            </a>
+
+            <a href="/licenciaturas" class="flex items-center justify-center gap-3 border-2 border-[#003366] text-[#003366] px-6 py-4 min-w-[200px] rounded-xl font-semibold hover:bg-[#003366] hover:text-white hover:scale-[1.03] transition-all duration-300">
+              <Icon name="mdi:school" class="w-6 h-6" />
+              <span class="text-lg md:text-xl">Ver programas</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
