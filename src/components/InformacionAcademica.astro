@@ -1,0 +1,47 @@
+---
+// src/components/InformacionAcademica.astro
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="mt-16 px-4 md:px-8 max-w-6xl mx-auto">
+  <h2 class="text-2xl md:text-3xl font-bold text-[#003366] mb-6 text-center">
+    Información Académica
+  </h2>
+  <p class="text-base md:text-lg text-neutral-600 text-center mb-6">
+    Consulta aquí los lineamientos académicos vigentes para cada nivel educativo.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+    
+    <!-- Reglamento institucional -->
+    <a
+      href="/docs/reglamento.pdf"
+      target="_blank"
+      class="bg-white border border-neutral-300 rounded-xl p-6 shadow hover:shadow-md transition-all duration-300 hover:scale-[1.02]"
+    >
+      <Icon name="mdi:file-document-outline" class="w-8 h-8 mx-auto mb-2 text-[#F57C00]" />
+      <span class="font-semibold text-[#003366] text-lg md:text-xl">Reglamento institucional</span>
+    </a>
+
+    <!-- Titulación licenciaturas -->
+    <a
+      href="/docs/titulacion-licenciatura.pdf"
+      target="_blank"
+      class="bg-white border border-neutral-300 rounded-xl p-6 shadow hover:shadow-md transition-all duration-300 hover:scale-[1.02]"
+    >
+      <Icon name="mdi:school-outline" class="w-8 h-8 mx-auto mb-2 text-[#F57C00]" />
+      <span class="font-semibold text-[#003366] text-lg md:text-xl">Titulación<br>Licenciaturas</span>
+    </a>
+
+    <!-- Titulación posgrados -->
+    <a
+      href="/docs/titulacion-posgrado.pdf"
+      target="_blank"
+      class="bg-white border border-neutral-300 rounded-xl p-6 shadow hover:shadow-md transition-all duration-300 hover:scale-[1.02]"
+    >
+      <Icon name="mdi:school" class="w-8 h-8 mx-auto mb-2 text-[#F57C00]" />
+      <span class="font-semibold text-[#003366] text-lg md:text-xl">Titulación<br>Posgrados</span>
+    </a>
+
+  </div>
+</section>
