@@ -11,13 +11,15 @@ import { Icon } from 'astro-icon/components';
 
     <!-- Botón hamburguesa -->
     <button
-      id="menu-toggle"
-      class="md:hidden text-[#1F3C88] focus:outline-none"
-      aria-label="Abrir o cerrar menú"
-      aria-expanded="false"
-    >
-      <Icon name="mdi:menu" class="h-6 w-6" id="menu-icon" />
-    </button>
+  id="menu-toggle"
+  class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-[6px] focus:outline-none group"
+  aria-label="Abrir o cerrar menú"
+  aria-expanded="false"
+>
+  <span class="w-6 h-[2px] bg-[#1F3C88] transition-transform duration-300 ease-in-out group-[aria-expanded=true]:rotate-45 group-[aria-expanded=true]:translate-y-[6px]"></span>
+  <span class="w-6 h-[2px] bg-[#1F3C88] transition-opacity duration-300 ease-in-out group-[aria-expanded=true]:opacity-0"></span>
+  <span class="w-6 h-[2px] bg-[#1F3C88] transition-transform duration-300 ease-in-out group-[aria-expanded=true]:-rotate-45 group-[aria-expanded=true]:-translate-y-[6px]"></span>
+</button>
 
     <!-- Menú horizontal (solo escritorio) -->
     <ul class="hidden md:flex space-x-6 font-medium">
@@ -32,10 +34,10 @@ import { Icon } from 'astro-icon/components';
 
   <!-- Menú móvil -->
   <ul
-    id="menu"
-    class="hidden flex-col space-y-4 font-medium px-4 pb-4 bg-[#F3F4F6] z-[60] relative"
-    role="navigation"
-  >
+  id="menu"
+  class="hidden flex-col space-y-4 font-medium px-4 pb-4 bg-[#F3F4F6] z-[60] relative transition-all duration-300 ease-in-out"
+  role="navigation"
+>
     <li><a href="/" class="hover:text-[#F57C00] transition">Inicio</a></li>
     <li><a href="/licenciaturas" class="hover:text-[#F57C00] transition">Licenciaturas</a></li>
     <li><a href="/ingenierias" class="hover:text-[#F57C00] transition">Ingenierías</a></li>
@@ -49,31 +51,30 @@ import { Icon } from 'astro-icon/components';
   document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-    const icon = document.getElementById('menu-icon');
 
-    if (!toggle || !menu || !icon) return;
+    if (!toggle || !menu) return;
 
     toggle.addEventListener('click', () => {
-      const isOpen = !menu.classList.contains('hidden');
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
 
       if (isOpen) {
+        // Cerrar menú
         menu.classList.add('hidden');
         menu.classList.remove('flex', 'flex-col');
-        icon.setAttribute('name', 'mdi:menu');
         toggle.setAttribute('aria-expanded', 'false');
       } else {
+        // Abrir menú
         menu.classList.remove('hidden');
         menu.classList.add('flex', 'flex-col');
-        icon.setAttribute('name', 'mdi:close');
         toggle.setAttribute('aria-expanded', 'true');
       }
     });
 
+    // Cierra el menú al hacer clic en cualquier enlace
     menu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menu.classList.add('hidden');
         menu.classList.remove('flex', 'flex-col');
-        icon.setAttribute('name', 'mdi:menu');
         toggle.setAttribute('aria-expanded', 'false');
       });
     });

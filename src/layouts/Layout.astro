@@ -13,7 +13,7 @@ import '../styles/global.css'
     <title>Instituto Universitario Puebla</title>
   </head>
   <body>
-    <!-- Encabezado fijo con Topbar y Header -->
+    <!-- 🔧 Encabezado fijo con Topbar y Header -->
     <header class="fixed top-0 left-0 w-full z-50">
       <div id="header-container" class="relative pt-[26px] transition-all duration-500 ease-in-out">
         <Top />
@@ -21,23 +21,20 @@ import '../styles/global.css'
       </div>
     </header>
 
-    <!-- Contenido principal -->
+    <!-- 🔧 Contenido principal con espacio compensado -->
     <main class="pt-[80px]">
       <slot />
     </main>
 
-    <!-- Pie de página -->
+    <!-- 🔧 Pie de página -->
     <Footer />
 
-    <!-- Scripts para comportamiento del Topbar y menú móvil -->
+    <!-- ✅ Script para comportamiento del Topbar -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const topbar = document.getElementById('topbar');
         const container = document.getElementById('header-container');
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
 
-        // Comportamiento del Topbar al hacer scroll
         if (topbar && container) {
           container.style.paddingTop = '26px';
           window.addEventListener('scroll', () => {
@@ -52,16 +49,12 @@ import '../styles/global.css'
           });
         }
 
-        // Comportamiento del menú móvil
-        if (toggle && menu) {
-          toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-          });
-        }
+        // ❌ Eliminado: script duplicado del menú hamburguesa
+        // El comportamiento del menú móvil ya está controlado en Header.astro
       });
     </script>
 
-    <!-- Estilos base -->
+    <!-- 🔧 Estilos base -->
     <style>
       html,
       body {
