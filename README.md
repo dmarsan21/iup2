@@ -1,46 +1,47 @@
-# Astro Starter Kit: Basics
+# 🌐 Sitio Institucional — Instituto Universitario Puebla
 
-```sh
-npm create astro@latest -- --template basics
-```
+Plataforma web institucional desarrollada con Astro y Tailwind CSS, enfocada en modularidad, responsividad y fidelidad visual a la identidad académica del Instituto Universitario Puebla.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🛠 Tecnologías utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build/) — Framework moderno para sitios rápidos y estáticos
+- [Tailwind CSS](https://tailwindcss.com/) — Utilidades CSS para diseño responsivo y accesible
+- Heroicons / Material Design Icons — Iconografía institucional
+- GitHub para control de versiones y despliegue
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+---
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 📱 Características clave
 
-## 🧞 Commands
+- ✅ Adaptación completa a dispositivos móviles (desde 320px)
+- 🎨 Diseño institucional con colores, tipografía y estructura coherente
+- 🧩 Componentes modulares (`Oferta`, `Bienvenida`, `Galería`, etc.)
+- 🖼️ Galería estilo Bento con animaciones suaves y orden narrativo
+- ♿ Mejora de accesibilidad (`alt`, `aria-label`, estructura semántica)
+- 🔍 Layout refinado para evitar scroll horizontal y mantener jerarquía visual
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Cómo ejecutar el proyecto
 
-## 👀 Want to learn more?
+```bash
+npm install
+npm run dev
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+src/
+├── components/       # Componentes reutilizables
+├── layouts/          # Estructuras base como Header, Footer
+├── pages/            # Rutas principales del sitio
+├── styles/           # Configuración de Tailwind y estilos globales
+
+
+👨‍💻 Autor
+Desarrollado por Devmarsan
+Diseñador y desarrollador frontend.
+
+📌 Estado del proyecto
+✅ Versión estable entregada
+📱 Totalmente adaptado a móvil
+🧪 Listo para revisión y mejoras futura
