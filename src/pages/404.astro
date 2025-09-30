@@ -1,6 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
 import '../styles/global.css'
+import Image from 'astro/components/Image.astro';
+
+import panteraImage from '../assets/images/pantera.png';
 ---
 
 <html lang="es">
@@ -16,7 +19,12 @@ import '../styles/global.css'
         <!-- Columna izquierda: Pantera -->
         <!-- Columna izquierda: Pantera -->
         <div class="flex justify-center">
-          <img src="/images/pantera.png" alt="Pantera institucional IUP" class="w-64 md:w-80 lg:w-96 drop-shadow-lg max-w-full" />
+          <Image 
+            src={panteraImage} 
+            alt="Pantera institucional IUP" 
+            class="w-64 md:w-80 lg:w-96 drop-shadow-lg max-w-full" width={384} height={216}
+          />
+          <!-- <img src="/images/pantera.png" alt="Pantera institucional IUP" class="w-64 md:w-80 lg:w-96 drop-shadow-lg max-w-full" /> -->
         </div>
 
         <!-- Columna derecha: Texto -->
