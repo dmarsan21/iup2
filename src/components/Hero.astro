@@ -1,4 +1,9 @@
 ---
+import Image from "astro/components/Image.astro";
+
+// Importacion de imagenes
+import heroImage from '../assets/images/iuphero.png';
+
 // Puedes pasar props si quieres hacerlo reutilizable
 const { title = "Conoce nuestra oferta Académica", subtitle = "Descubre las oportunidades disponibles para tu crecimiento académico y profesional.", buttonText = "Solicitar Información", buttonLink = "/contact" } = Astro.props;
 ---
@@ -19,6 +24,9 @@ const { title = "Conoce nuestra oferta Académica", subtitle = "Descubre las opo
 
   <!-- Image -->
   <div class="w-full md:w-1/2">
-    <img src="/images/iuphero.png" alt="IUP" class="rounded-lg shadow-md w-full object-cover" />
+    <Image 
+      src={heroImage} alt="IUP" class="rounded-lg shadow-md w-full object-cover" width={600} height={400} 
+    />
+    <!-- <img src="/images/iuphero.png" alt="IUP" class="rounded-lg shadow-md w-full object-cover" /> -->
   </div>
 </section>

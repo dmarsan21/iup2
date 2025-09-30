@@ -1,5 +1,13 @@
 ---
+import Image from "astro/components/Image.astro";
 
+// importacion de imagenes
+import graduadosImage from '../assets/images/graduados.png';
+import civilImage from '../assets/images/civil.png';
+import panteraImage from '../assets/images/panterafondo.png';
+import criminologiaImage from '../assets/images/criminologia.png';
+import estudiandoImage from '../assets/images/estudiando.png';
+import futbolImage from '../assets/images/futbol.png';
 ---
 
 <section class="w-full bg-white py-16 overflow-x-hidden">
@@ -12,17 +20,26 @@
 
       <!-- Bloque grande horizontal -->
       <div class="sm:col-span-2 bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/graduados.png" alt="Graduados IUP" class="w-full h-full object-cover" />
+        <Image 
+          src={graduadosImage} alt="Graduados IUP" class="w-full h-full object-cover" width={600} height={400}
+        />
+        <!-- <img src="/images/graduados.png" alt="Graduados IUP" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque cuadrado -->
       <div class="bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/civil.png" alt="Ingeniería Civil" class="w-full h-full object-cover" />
+        <Image 
+          src={civilImage} alt="Ingeniería Civil" class="w-full h-full object-cover" width={600} height={400}
+        />
+        <!-- <img src="/images/civil.png" alt="Ingeniería Civil" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque vertical -->
       <div class="sm:row-span-2 bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/panterafondo.png" alt="Pantera IUP" class="w-full h-full object-cover" />
+        <Image 
+          src={panteraImage} alt="Pantera IUP" class="w-full h-full object-cover" width={600} height={800}
+        />
+        <!-- <img src="/images/panterafondo.png" alt="Pantera IUP" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque con frase institucional -->
@@ -34,17 +51,26 @@
 
       <!-- Bloque cuadrado -->
       <div class="bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/criminologia.png" alt="Criminología" class="w-full h-full object-cover" />
+        <Image 
+          src={criminologiaImage} alt="Criminología" class="w-full h-full object-cover" width={600} height={400}
+        />
+        <!-- <img src="/images/criminologia.png" alt="Criminología" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque laboratorio reducido -->
       <div class="bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/estudiando.png" alt="Estudiando IUP" class="w-full h-full object-cover" />
+        <Image 
+          src={estudiandoImage} alt="Estudiando IUP" class="w-full h-full object-cover" width={600} height={400}
+        />
+        <!-- <img src="/images/estudiando.png" alt="Estudiando IUP" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque institucional izquierdo -->
       <div class="bg-neutral-100 rounded-xl overflow-hidden">
-        <img src="/images/futbol.png" alt="Torneo IUP" class="w-full h-full object-cover" />
+        <Image 
+          src={futbolImage} alt="Torneo IUP" class="w-full h-full object-cover" width={600} height={400}
+        />
+        <!-- <img src="/images/futbol.png" alt="Torneo IUP" class="w-full h-full object-cover" /> -->
       </div>
 
       <!-- Bloque institucional amplio para cerrar la cuadrícula -->

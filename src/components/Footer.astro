@@ -1,5 +1,9 @@
 ---
 import { Icon } from 'astro-icon/components';
+import Image from 'astro/components/Image.astro';
+
+// importacion de imagenes
+import footerImage from '../assets/images/iupfooter.png';
 ---
 
 <footer class="bg-[#003366] text-white py-10 mt-16">
@@ -7,7 +11,10 @@ import { Icon } from 'astro-icon/components';
 
     <!-- Logo y lema -->
     <div>
-      <img src="/images/iupfooter.png" alt="Logo Instituto Universitario Puebla" class="h-12 mx-auto md:mx-0 mb-4" />
+      <Image 
+        src={footerImage} alt="Logo Instituto Universitario Puebla" class="h-12 mx-auto md:mx-0 mb-4" width={150} height={50}
+      />
+      <!-- <img src="/images/iupfooter.png" alt="Logo Instituto Universitario Puebla" class="h-12 mx-auto md:mx-0 mb-4" /> -->
       <p class="italic text-sm">
         Fuerza que inspira, garra que trasciende.
       </p>

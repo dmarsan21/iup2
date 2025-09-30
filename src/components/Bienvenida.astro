@@ -1,4 +1,9 @@
 ---
+import Image from "astro/components/Image.astro";
+
+// importacion de imagenes
+import mascotaImage from '../assets/images/panteraIUP.png';
+
 const { imagenMascota, titulo, mensaje, enlace } = Astro.props;
 ---
 
@@ -7,8 +12,12 @@ const { imagenMascota, titulo, mensaje, enlace } = Astro.props;
 
     <!-- Columna de imagen -->
     <div class="md:w-1/2 flex flex-col items-center">
-      <img src={imagenMascota || "/images/panteraIUP.png"} alt="Mascota institucional"
-           class="w-full max-w-sm drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] mb-6" />
+      <Image 
+        src={imagenMascota || mascotaImage} alt="Mascota institucional"
+        class="w-full max-w-sm drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] mb-6" width={400} height={400}
+      />
+      <!-- <img src={imagenMascota || "/images/panteraIUP.png"} alt="Mascota institucional"
+           class="w-full max-w-sm drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] mb-6" /> -->
     </div>
 
     <!-- Columna de texto alineada verticalmente -->

@@ -1,12 +1,21 @@
 ---
-import { Icon } from 'astro-icon/components';
+import Image from "astro/components/Image.astro";
+
+// Importacion de imagenes
+import logo from '../assets/images/iuplogo.png';
+
+// import { Icon } from 'astro-icon/components';
+
 ---
 
 <nav class="bg-[#F3F4F6] text-[#1F3C88] border-b border-[#E0E0E0] shadow-sm z-40 relative">
   <div class="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
     <!-- Logo como enlace -->
     <a href="/" aria-label="Ir a la página principal">
-      <img src="/images/iuplogo.png" alt="Instituto Universitario Puebla" class="h-8 w-auto" />
+      <Image 
+        src={logo} alt="Instituto Universitario Puebla" class="h-8 w-auto" width={160} height={40}
+      />
+      <!-- <img src="/images/iuplogo.png" alt="Instituto Universitario Puebla" class="h-8 w-auto" /> -->
     </a>
 
     <!-- Botón hamburguesa -->

@@ -1,5 +1,11 @@
 ---
+import Image from "astro/components/Image.astro";
 
+// importacion de imagenes
+import licenciaturasImage from '../assets/images/licenciaturas.png';
+import ingenieriasImage from '../assets/images/ingenierias.png';
+import maestriasImage from '../assets/images/maestrias.png';
+import doctoradosImage from '../assets/images/doctorados.png';
 ---
 
 <section class="bg-[#F3F4F6] py-16 px-6 md:px-12 lg:px-24">
@@ -16,7 +22,10 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <!-- Licenciaturas -->
     <div class="bg-[#1F2937] rounded-lg shadow hover:shadow-lg hover:bg-[#374151] transition duration-300 overflow-hidden">
-      <img src="/images/licenciaturas.png" alt="Licenciatura" class="w-full h-40 object-cover" />
+      <Image 
+        src={licenciaturasImage} alt="Licenciatura" class="w-full h-40 object-cover" width={400} height={160}
+      />
+      <!-- <img src="/images/licenciaturas.png" alt="Licenciatura" class="w-full h-40 object-cover" /> -->
       <div class="p-6 text-center">
         <h3 class="text-xl font-semibold text-[#F57C00] mb-2">Licenciaturas</h3>
         <p class="text-white text-sm">
@@ -27,7 +36,10 @@
 
     <!-- Ingenierías -->
     <div class="bg-[#1F2937] rounded-lg shadow hover:shadow-lg hover:bg-[#374151] transition duration-300 overflow-hidden">
-      <img src="/images/ingenierias.png" alt="Ingeniería" class="w-full h-40 object-cover" />
+      <Image 
+        src={ingenieriasImage} alt="Ingeniería" class="w-full h-40 object-cover" width={400} height={160}
+      />
+      <!-- <img src="/images/ingenierias.png" alt="Ingeniería" class="w-full h-40 object-cover" /> -->
       <div class="p-6 text-center">
         <h3 class="text-xl font-semibold text-[#F57C00] mb-2">Ingenierías</h3>
         <p class="text-white text-sm">
@@ -38,7 +50,10 @@
 
     <!-- Maestrías -->
     <div class="bg-[#1F2937] rounded-lg shadow hover:shadow-lg hover:bg-[#374151] transition duration-300 overflow-hidden">
-      <img src="/images/maestrias.png" alt="Maestría" class="w-full h-40 object-cover" />
+      <Image 
+        src={maestriasImage} alt="Maestría" class="w-full h-40 object-cover" width={400} height={160}
+      />
+      <!-- <img src="/images/maestrias.png" alt="Maestría" class="w-full h-40 object-cover" /> -->
       <div class="p-6 text-center">
         <h3 class="text-xl font-semibold text-[#F57C00] mb-2">Maestrías</h3>
         <p class="text-white text-sm">
@@ -49,7 +64,10 @@
 
     <!-- Doctorado -->
     <div class="bg-[#1F2937] rounded-lg shadow hover:shadow-lg hover:bg-[#374151] transition duration-300 overflow-hidden">
-      <img src="/images/doctorados.png" alt="Doctorado" class="w-full h-40 object-cover" />
+      <Image 
+        src={doctoradosImage} alt="Doctorado" class="w-full h-40 object-cover" width={400} height={160}
+      />
+      <!-- <img src="/images/doctorados.png" alt="Doctorado" class="w-full h-40 object-cover" /> -->
       <div class="p-6 text-center">
         <h3 class="text-xl font-semibold text-[#F57C00] mb-2">Doctorados</h3>
         <p class="text-white text-sm">

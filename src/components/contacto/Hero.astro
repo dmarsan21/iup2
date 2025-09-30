@@ -1,5 +1,8 @@
 ---
+import Image from "astro/components/Image.astro";
 
+// importacion de imagenes
+import panteraContacto from '../../assets/images/panteracontacto.png';
 ---
 
 <section class="py-16 bg-gradient-to-br from-[#1F3C88] to-[#1F3C88]/90 text-white">
@@ -18,9 +21,14 @@
 
     <!-- Imagen de la mascota -->
     <div class="flex justify-center">
-      <img src="/images/panteracontacto.png" alt="Mascota IUP" class="w-72 h-auto"
+      <Image 
+        src={panteraContacto} alt="Mascota IUP" class="w-72 h-auto" width={288} height={324}
         style="filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 1));"
       />
+        
+      <!-- <img src="/images/panteracontacto.png" alt="Mascota IUP" class="w-72 h-auto"
+        style="filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 1));"
+      /> -->
     </div>
 
   </div>

@@ -1,5 +1,10 @@
 ---
+import Image from "astro/components/Image.astro";
 
+// importacion de imagenes
+import licenciaturaImage from '../../assets/images/licenciatura.png';
+import ingenieriaImage from '../../assets/images/ingenieria.png';
+import doctoradoImage from '../../assets/images/doctorado.png';
 ---
 
 <!-- Niveles oferta educativa -->
@@ -10,7 +15,15 @@
   <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-3">
     <!-- Card 1: Ingenierías -->
     <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-      <img src="/images/licenciatura.png" alt="Ingenierías" class="w-full h-48 object-cover" />
+      <Image  
+        src={licenciaturaImage}
+        alt="Licenciaturas"
+        class="w-full h-48 object-cover"
+        width={400}
+        height={300}
+        loading="lazy"
+      />
+      <!-- <img src="/images/licenciatura.png" alt="Ingenierías" class="w-full h-48 object-cover" /> -->
       <div class="p-6 flex flex-col items-start">
         <h3 class="text-xl font-semibold text-[#1F3C88] mb-2">Licenciaturas</h3>
         <p class="text-sm text-gray-600 mb-4">Programas profesionales para iniciar tu carrera universitaria con bases sólidas.</p>
@@ -23,7 +36,15 @@
 
     <!-- Card 2: Ingenierías -->
     <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-      <img src="/images/ingenieria.png" alt="Ingenierías" class="w-full h-48 object-cover" />
+      <Image  
+        src={ingenieriaImage}
+        alt="Ingenierías"
+        class="w-full h-48 object-cover"
+        width={400}
+        height={300}
+        loading="lazy"
+      />
+      <!-- <img src="/images/ingenieria.png" alt="Ingenierías" class="w-full h-48 object-cover" /> -->
       <div class="p-6 flex flex-col items-start">
         <h3 class="text-xl font-semibold text-[#1F3C88] mb-2">Ingenierías</h3>
         <p class="text-sm text-gray-600 mb-4">Formación técnica y científica para resolver problemas reales con innovación.</p>
@@ -36,7 +57,15 @@
 
     <!-- Card 3: Doctorados -->
     <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-      <img src="/images/doctorado.png" alt="Doctorados" class="w-full h-48 object-cover" />
+      <Image  
+        src={doctoradoImage}
+        alt="Doctorados"
+        class="w-full h-48 object-cover"
+        width={400}
+        height={300}
+        loading="lazy"
+      />
+      <!-- <img src="/images/doctorado.png" alt="Doctorados" class="w-full h-48 object-cover" /> -->
       <div class="p-6 flex flex-col items-start">
         <h3 class="text-xl font-semibold text-[#1F3C88] mb-2">Doctorados</h3>
         <p class="text-sm text-gray-600 mb-4">Especialízate y profundiza tu conocimiento con programas de alto nivel académico.</p>
