@@ -37,7 +37,7 @@ const { imagenMascota, titulo, mensaje, enlace } = Astro.props;
 
       <!-- CTA con ancho controlado -->
       <div class="flex justify-center md:justify-start">
-        <a href={enlace || "#inscripciones"}
+        <a href={enlace || "https://api.whatsapp.com/send?phone=5212284071949"} target="_blank" rel="noopener noreferrer"
            class="inline-block bg-[#F57C00] text-white px-6 py-3 rounded-xl text-base font-semibold shadow-md hover:bg-orange-600 transition whitespace-nowrap">
           ¡Inscríbete hoy y transforma tu futuro!
         </a>
