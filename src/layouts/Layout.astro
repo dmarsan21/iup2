@@ -4,6 +4,8 @@ import Top from '../components/Top.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
+
+const { title = "Instituto Universitario Puebla", description = "Educación con excelencia académica." } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -11,7 +13,8 @@ import '../styles/global.css'
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-    <title>Instituto Universitario Puebla</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
   </head>
   <body>
     <!-- 🔧 Encabezado fijo con Topbar y Header -->
