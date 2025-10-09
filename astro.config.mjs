@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 import icon from 'astro-icon';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   devToolbar: {
@@ -14,6 +16,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
-  integrations: [icon()],
+  site: 'https://iup.mx',
+  integrations: [icon(), sitemap()],
 });

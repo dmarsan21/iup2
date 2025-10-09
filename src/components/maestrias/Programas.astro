@@ -7,15 +7,19 @@ const programas = [
     descripcion: "Desarrolla habilidades directivas, toma de decisiones estratégicas y liderazgo organizacional para impulsar el crecimiento empresarial en entornos competitivos.",
     icono: "mdi:briefcase-outline", // Representa gestión y liderazgo empresarial
     plantel: "Plantel Córdoba",
-    rvoe: "RVOE: 20230001",
+    rvoe: "RVOE: ES208/2003",
+    plantel2: "Plantel Xalapa",
+    rvoe2: "RVOE: ES031/2002",
     enlace: "maestrias/made"
   },
   {
     nombre: "Tecnología Educativa",
     descripcion: "Integra herramientas digitales, metodologías innovadoras y plataformas virtuales para transformar procesos de enseñanza y aprendizaje en contextos educativos.",
     icono: "mdi:tablet-dashboard", // Representa tecnología aplicada a la educación
-    plantel: "Plantel Xalapa",
-    rvoe: "RVOE: 20230002",
+    plantel: "Plantel Córdoba",
+    rvoe: "RVOE: ES093/2005",
+    plantel2: "Plantel Xalapa",
+    rvoe2: "RVOE: ES107/2005",
     enlace: "/maestrias/mate"
   },
   {
@@ -23,7 +27,9 @@ const programas = [
     descripcion: "Gestiona recursos, lidera equipos académicos y diseña estrategias institucionales para mejorar la calidad educativa y el desempeño organizacional.",
     icono: "mdi:school-outline", // Representa gestión institucional en el ámbito educativo
     plantel: "Plantel Córdoba",
-    rvoe: "RVOE: 20230003",
+    rvoe: "RVOE: ES207/2003",
+    plantel2: "Plantel Xalapa",
+    rvoe2: "RVOE: ES035/2002",
     enlace: "/maestrias/magie"
   },
 ];
@@ -43,6 +49,8 @@ const programas = [
         <p class="text-gray-700 mb-2">{programa.descripcion}</p>
         <p class="text-sm text-gray-600 mb-1"><strong>Plantel:</strong> {programa.plantel}</p>
         <p class="text-sm text-gray-600 mb-4"><strong>{programa.rvoe}</strong></p>
+        <p class="text-sm text-gray-600 mb-1"><strong>Plantel:</strong> {programa.plantel2}</p>
+        <p class="text-sm text-gray-600 mb-4"><strong>{programa.rvoe2}</strong></p>
         <a href={programa.enlace} class="inline-block text-center bg-[#F57C00] text-white px-4 py-2 rounded hover:bg-orange-600 transition">
             Conoce más
           </a>
